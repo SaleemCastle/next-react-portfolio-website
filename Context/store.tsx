@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, Dispatch, SetStateAction, useState } from 'react'
+import { createContext, useContext, Dispatch, SetStateAction, useState, FC, ReactNode } from 'react'
 import IExperience from '../models/experience'
 
 interface ContextProps {
@@ -13,7 +13,11 @@ const GlobalContext = createContext<ContextProps>({
   setExperiences: ():IExperience[] => []
 })
 
-export const GlobalContextProvider = ({ children }) => {
+interface IProps{
+  children: ReactNode
+}
+
+export const GlobalContextProvider: FC<IProps> = ({ children, ...props}) => {
   const [experiences, setExperiences] = useState<[] | IExperience[]>([])
 
   return (
