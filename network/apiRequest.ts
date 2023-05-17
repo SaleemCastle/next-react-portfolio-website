@@ -4,7 +4,7 @@ const url = 'https://my-portfolio-backend-express.herokuapp.com/'
 
 export const getExperiences = async () => {
   let experiences: IExperience[] = [{
-    title: '', description: '', employer: '', period: '', highlights: ['']
+    title: '', description: '', employer: '', period: '', highlights: [''], technologies: ['']
   }]
 
   try {

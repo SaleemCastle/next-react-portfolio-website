@@ -27,17 +27,13 @@ import CardSkeleton from '../../components/CardSkeleton';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
-  const [isLoading, setLoading] = useState(false)
   const { experiences, setExperiences } = useGlobalContext()
 
   useEffect(() => {
-    // setLoading(true)
-    console.log(experiences)
     getExperiences().then((data) => {
       setExperiences(data)
     })
-    // setLoading(false)
-  }, [])
+  })
 
   return (
     <div className={darkMode ? 'dark' : ''}>
