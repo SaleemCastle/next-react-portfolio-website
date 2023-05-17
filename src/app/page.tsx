@@ -58,7 +58,7 @@ export default function Home() {
                 }
               </li>
               <li>
-                <a href="/resume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
+                <a href="/resumev2.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
                   Résumé
                 </a>
               </li>
@@ -143,7 +143,7 @@ export default function Home() {
           <div>
             <p className='text-md leading-8 text-gray-800 dark:text-white'>Upcoming Projects</p>
             <p className='text-md pb-5 leading-8 text-teal-600 dark:text-white'>Dental Booking Web App</p>
-            <Image src={ dental } alt='' className='rounded-lg object-cover pb-10' style={{ width: '5 0%', height: '5  0%' }}/>
+            <Image src={ dental } alt='' className='rounded-lg object-cover pb-10' style={{ width: '50%', height: '50%' }}/>
           </div>
         </section>
 
@@ -152,7 +152,7 @@ export default function Home() {
             <h3 className='text-3xl py-1 text-white dark:text-gray-800'>Technologies and Frameworks</h3>
             <p className='text-md py-5 leading-8 text-white dark:text-gray-800'>Languages I have played around with and used professionaly during my development journey thus far: </p>
           </div>
-          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+          <div className='flex flex-wrap  gap-10 py-10 lg:flex-row md:flex-wrap sm:flex-wrap'>
             {
               techStack.map((tech, index) => (
                 <Image key={ index } className='mx-auto' src={ getTechnologyLogos(tech) } height={ 40 } alt={ tech }/>
