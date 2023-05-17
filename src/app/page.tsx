@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div>
+          <div className='pt-3'>
             <h3 className='text-3xl py-1 text-gray-800 dark:text-white'>Portfolio</h3>
             {/* <p className='text-md py-5 leading-8 text-gray-800 dark:text-white'>Since the beginning of my journey as a deeloper I have done work for</p> */}
           </div>
