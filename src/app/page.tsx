@@ -33,7 +33,7 @@ export default function Home() {
     getExperiences().then((data) => {
       setExperiences(data)
     })
-  })
+  },[])
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -54,7 +54,9 @@ export default function Home() {
                   ?
                   <FaSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-white'/>
                   :
-                  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black' />
+                  <div className=''>
+                    <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black' />
+                  </div>
                 }
               </li>
               <li>
