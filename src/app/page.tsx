@@ -33,6 +33,7 @@ export default function Home() {
     getExperiences().then((data) => {
       setExperiences(data)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (
