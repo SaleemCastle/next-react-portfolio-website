@@ -25,6 +25,8 @@ import techStack from '../../util/tech';
 import { getTechnologyLogos } from '../../utilityFunctions';
 import CardSkeleton from '../../components/CardSkeleton';
 
+import './styles.css'
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   const { experiences, setExperiences } = useGlobalContext()
@@ -55,7 +57,7 @@ export default function Home() {
                   ?
                   <FaSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-white'/>
                   :
-                  <div className=''>
+                  <div className='animation'>
                     <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black' />
                   </div>
                 }
