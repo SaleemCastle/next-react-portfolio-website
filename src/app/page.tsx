@@ -63,7 +63,7 @@ export default function Home() {
                 }
               </li>
               <li>
-                <a href="/resumev2.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
+                <a href="/résumé.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
                   Résumé
                 </a>
               </li>
