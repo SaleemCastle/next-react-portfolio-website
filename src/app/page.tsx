@@ -42,7 +42,9 @@ export default function Home() {
     <div className={darkMode ? 'dark' : ''}>
       <Head>
         <title>Saleem St. Micahel Castle Portfolio</title>
-        <meta name='description'></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+        <meta name='description' content='react portfolio website for software engineer saleem castle'></meta>
+        <meta name='keyword' content='saleem, castle, saleem castle, portfolio, software engineer, react, developer, javascript, typescript, tailwind, resume'></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -139,16 +141,16 @@ export default function Home() {
           </div>
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
             <div className='basis-1/3 flex-1'>
-              <Image src={ ooz } alt='' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+              <Image src={ ooz } alt='mobile_app_project' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image src={ hotelpage1 } alt='' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+              <Image src={ hotelpage1 } alt='css_project_eduonix' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
             </div>
           </div>
           <div>
             <p className='text-md leading-8 text-gray-800 dark:text-white'>Upcoming Projects</p>
             <p className='text-md pb-5 leading-8 text-teal-600 dark:text-white'>Dental Booking Web App</p>
-            <Image src={ dental } alt='' className='rounded-lg object-cover pb-10 w-1/2 h-1/2'/>
+            <Image src={ dental } alt='upcoming_web_app' className='rounded-lg object-cover pb-10 w-1/2 h-1/2'/>
           </div>
         </section>
 
