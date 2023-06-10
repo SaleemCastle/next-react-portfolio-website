@@ -21,7 +21,7 @@ const Card = (props: IProps) => {
       boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       borderRadius: 12
     }}>
-      <Image className='mx-auto' src={ icon } width={ 100 } height={ 100 } alt=''/>
+      <Image className='mx-auto' src={ icon } width={ 100 } height={ 100 } alt='avatar'/>
       <h3 className='text-lg font-medium pt-8 pb-2 text-gray-800'>{ title }</h3>
       <h3 className='font-light pb-2 text-gray-800 text-xs'>{ `(${period})` }</h3>
       <p className='py-2 text-gray-800 text-xs'>

@@ -42,12 +42,14 @@ export default function Home() {
     <div className={darkMode ? 'dark' : ''}>
       <Head>
         <title>Saleem St. Micahel Castle Portfolio</title>
-        <meta name='description'></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+        <meta name='description' content='react portfolio website for software engineer saleem castle'></meta>
+        <meta name='keyword' content='saleem, castle, saleem castle, portfolio, software engineer, react, developer, javascript, typescript, tailwind, resume'></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 bg-fixed bg-cover' style={{backgroundImage: `url(${bgImg.src})`}}>
-        <section className='min-h-screen'>
+      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 bg-fixed bg-cover max-[600px]:px-0' style={{backgroundImage: `url(${bgImg.src})`}}>
+        <section className='min-h-screen max-[600px]:px-16'>
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl text-black font-burtons dark:text-white'>Saleem Castle</h1>    
             <ul className='flex items-center'>
@@ -87,7 +89,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section>
+        <section className='max-[600px]:px-16'>
           <div>
             <h3 className='text-3xl py-1 text-gray-800 dark:text-white'>Experience</h3>
             {/* <p className='text-md py-5 leading-8 text-gray-800 dark:text-white'>Since the beginning of my journey as a deeloper I have done work for</p> */}
@@ -132,48 +134,50 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section className='max-[600px]:px-16'>
           <div className='pt-3'>
             <h3 className='text-3xl py-1 text-gray-800 dark:text-white'>Portfolio</h3>
             {/* <p className='text-md py-5 leading-8 text-gray-800 dark:text-white'>Since the beginning of my journey as a deeloper I have done work for</p> */}
           </div>
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
             <div className='basis-1/3 flex-1'>
-              <Image src={ ooz } alt='' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+              <Image src={ ooz } alt='mobile_app_project' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image src={ hotelpage1 } alt='' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+              <Image src={ hotelpage1 } alt='css_project_eduonix' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
             </div>
           </div>
           <div>
             <p className='text-md leading-8 text-gray-800 dark:text-white'>Upcoming Projects</p>
             <p className='text-md pb-5 leading-8 text-teal-600 dark:text-white'>Dental Booking Web App</p>
-            <Image src={ dental } alt='' className='rounded-lg object-cover pb-10' style={{ width: '50%', height: '50%' }}/>
+            <Image src={ dental } alt='upcoming_web_app' className='rounded-lg object-cover pb-10 w-1/2 h-1/2'/>
           </div>
         </section>
 
-        <section className='bg-gray-700 pt-16 pb-1 px-16 dark:bg-white rounded-t-2xl'>
-          <div>
-            <h3 className='text-3xl py-1 text-white dark:text-gray-800'>Technologies and Frameworks</h3>
-            <p className='text-md py-5 leading-8 text-white dark:text-gray-800'>Languages I have played around with and used professionaly during my development journey thus far: </p>
-          </div>
-          <div className='flex flex-wrap  gap-10 py-10 lg:flex-row md:flex-wrap sm:flex-wrap'>
-            {
-              techStack.map((tech, index) => (
-                <Image key={ index } className='mx-auto' src={ getTechnologyLogos(tech) } height={ 40 } alt={ tech }/>
-              ))
-            }
-          </div>
+        <section className=''>
+            <div className='bg-gray-700 pt-16 pb-1 px-16 dark:bg-white rounded-t-2xl max-[600px]:rounded-none '>
+                <div>
+                    <h3 className='text-3xl py-1 text-white dark:text-gray-800'>Technologies and Frameworks</h3>
+                    <p className='text-md py-5 leading-8 text-white dark:text-gray-800'>Languages I have played around with and used professionaly during my development journey thus far: </p>
+                </div>
+                <div className='flex flex-wrap  gap-10 py-10 lg:flex-row md:flex-wrap sm:flex-wrap'>
+                    {
+                    techStack.map((tech, index) => (
+                        <Image key={ index } className='mx-auto' src={ getTechnologyLogos(tech) } height={ 40 } alt={ tech }/>
+                    ))
+                    }
+                </div>
 
-          <div>
-          <p className='text-md py-5 pb-10 leading-8 text-white dark:text-gray-800'>
-            This project was developed using <span className='text-teal-600'><a href='https://nextjs.org/' target='_blank'>NextJS </a></span> 
-            as the frontend component and styled with <span className='text-teal-600'><a href='https://tailwindcss.com/' target='_blank'>Tailwind CSS.</a> </span>
-            Backend component was developed using 
-            <span className='text-teal-600'><a href='https://nodejs.org/en' target='_blank'> NodeJs</a> </span> 
-            to perform CRUD operations on a <span className='text-teal-600'><a href='https://www.mongodb.com/' target='_blank'>MongoDB</a></span> database collection.
-          </p>
-          </div>
+                <div>
+                <p className='text-md py-5 pb-10 leading-8 text-white dark:text-gray-800'>
+                    This project was developed using <span className='text-teal-600'><a href='https://nextjs.org/' target='_blank'>NextJS </a></span> 
+                    as the frontend component and styled with <span className='text-teal-600'><a href='https://tailwindcss.com/' target='_blank'>Tailwind CSS.</a> </span>
+                    Backend component was developed using 
+                    <span className='text-teal-600'><a href='https://nodejs.org/en' target='_blank'> NodeJs</a> </span> 
+                    to perform CRUD operations on a <span className='text-teal-600'><a href='https://www.mongodb.com/' target='_blank'>MongoDB</a></span> database collection.
+                </p>
+                </div>
+            </div>
         </section>
       </main>
     </div>
