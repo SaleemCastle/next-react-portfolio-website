@@ -25,6 +25,8 @@ import techStack from '../../util/tech';
 import { getTechnologyLogos } from '../../utilityFunctions';
 import CardSkeleton from '../../components/CardSkeleton';
 
+import './styles.css'
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   const { experiences, setExperiences } = useGlobalContext()
@@ -33,7 +35,8 @@ export default function Home() {
     getExperiences().then((data) => {
       setExperiences(data)
     })
-  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -54,11 +57,13 @@ export default function Home() {
                   ?
                   <FaSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-white'/>
                   :
-                  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black' />
+                  <div className='animation'>
+                    <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black' />
+                  </div>
                 }
               </li>
               <li>
-                <a href="/resumev2.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
+                <a href="/résumé.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'>
                   Résumé
                 </a>
               </li>
