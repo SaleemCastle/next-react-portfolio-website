@@ -1,31 +1,35 @@
-"use client"; // this is a client component 
+'use client' // this is a client component 
 
-import Image, { StaticImageData } from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
+import Image, { StaticImageData } from 'next/image'
+
+import { AiFillLinkedin, AiFillGithub, AiFillCodepenCircle } from 'react-icons/ai'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { FaSun } from 'react-icons/fa'
-import { AiFillLinkedin, AiFillGithub, AiFillCodepenCircle } from "react-icons/ai"
+import { useEffect, useState } from 'react'
 
+import agilebsl from '../../public/agilebsl.jpg'
+import airbnbClone from '../../public/airbnb-clone.png'
 import avatar from '../../public/avataaars.png'
 import bairesdev from '../../public/design.png'
-import agilebsl from '../../public/agilebsl.jpg'
-import company from '../../public/company.png'
-import sms from '../../public/smsltd.jpg'
-import ooz from '../../public/oozwave.jpg'
-import hotelpage1 from '../../public/hotelpage.jpg'
 import bgImg from '../../public/bg-nondark.png'
+import company from '../../public/company.png'
 import dental from '../../public/dental.jpeg'
+import hotelpage1 from '../../public/hotelpage.jpg'
+import ooz from '../../public/oozwave.jpg'
+import sms from '../../public/smsltd.jpg'
+import techStack from '../../util/tech'
 
-import Card from '../../components/Card';
+import Card from '../../components/Card'
+import CardSkeleton from '../../components/CardSkeleton'
 
-import { useEffect, useState } from 'react'
-import { getExperiences } from '../../network/apiRequest';
+import { getExperiences } from '../../network/apiRequest'
 import { useGlobalContext } from '../../Context/store'
-import techStack from '../../util/tech';
-import { getTechnologyLogos } from '../../utilityFunctions';
-import CardSkeleton from '../../components/CardSkeleton';
+import { getTechnologyLogos } from '../../utilityFunctions'
 
 import './styles.css'
+import links from '../../util/links'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
@@ -75,7 +79,7 @@ export default function Home() {
           <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Saleem St. Michael Castle</h2>
             <h3 className='text-2xl py-2 md:text-3xl text-gray-800 dark:text-white'>Software Engineer</h3>
-            <p  className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white'>Mobile and Web Developer enthusiast with a passion for creating beautiful applications to help solve real-world problems</p>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white'>Mobile and Web Developer enthusiast with a passion for creating beautiful applications to help solve real-world problems</p>
           </div>
 
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white'>
@@ -145,6 +149,13 @@ export default function Home() {
             </div>
             <div className='basis-1/3 flex-1'>
               <Image src={ hotelpage1 } alt='css_project_eduonix' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+            </div>
+            <div className='basis-1/3 flex-1 relative overflow-hidden group rounded-lg'>
+              <Link href={ links.airbnbClone } className='flex items-center justify-center' target='_blank'>
+                <Image src={ airbnbClone } alt='css_project_eduonix' className='rounded-lg object-cover ease-in-out duration-500 group-hover:scale-110' style={{ width: '100%', height: '100%' }}/>
+                <div className="absolute bg-transparent w-full h-full opacity-0 rounded-lg overflow-hidden transition-opacity ease-in-out duration-500 group-hover:opacity-50 top-0  group-hover:bg-black" />
+                <h3 className='text-white z-10 absolute group-hover:opacity-100 opacity-0 transition-opacity ease-in-out duration-500 text-5xl'>See live Demo!</h3>
+              </Link>
             </div>
           </div>
           <div>
