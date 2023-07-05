@@ -154,7 +154,7 @@ export default function Home() {
               <Link href={ links.airbnbClone } className='flex items-center justify-center' target='_blank'>
                 <Image src={ airbnbClone } alt='css_project_eduonix' className='rounded-lg object-cover ease-in-out duration-500 group-hover:scale-110' style={{ width: '100%', height: '100%' }}/>
                 <div className="absolute bg-transparent w-full h-full opacity-0 rounded-lg overflow-hidden transition-opacity ease-in-out duration-500 group-hover:opacity-50 top-0  group-hover:bg-black" />
-                <h3 className='text-white z-10 absolute group-hover:opacity-100 opacity-0 transition-opacity ease-in-out duration-500 text-5xl'>See live Demo!</h3>
+                <h3 className='text-white z-10 absolute group-hover:opacity-100 opacity-0 transition-opacity ease-in-out duration-500 text-5xl'>Airbnb Clone!</h3>
               </Link>
             </div>
           </div>
