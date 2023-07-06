@@ -10,7 +10,7 @@ import { FaSun } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 import agilebsl from '../../public/agilebsl.jpg'
-import airbnbClone from '../../public/airbnb-clone.png'
+import airbnbClone from '../../public/airbnb-clone.jpg'
 import avatar from '../../public/avataaars.png'
 import bairesdev from '../../public/design.png'
 import bgImg from '../../public/bg-nondark.png'
