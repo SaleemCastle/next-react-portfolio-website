@@ -1,6 +1,6 @@
 import IExperience from '../models/experience'
 
-const url = 'https://my-portfolio-backend-express.herokuapp.com/'
+const url = 'https://portfolio-backend-8i8f.onrender.com/'
 
 export const getExperiences = async () => {
   let experiences: IExperience[] = [{
