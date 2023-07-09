@@ -10,7 +10,7 @@ import { FaSun } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 import agilebsl from '../../public/agilebsl.jpg'
-import airbnbClone from '../../public/airbnb-clone.jpg'
+import airbnbClone from '../../public/airbnb-clone.png'
 import avatar from '../../public/avataaars.png'
 import bairesdev from '../../public/design.png'
 import bgImg from '../../public/bg-nondark.png'
@@ -18,6 +18,7 @@ import company from '../../public/company.png'
 import dental from '../../public/dental.jpeg'
 import hotelpage1 from '../../public/hotelpage.jpg'
 import ooz from '../../public/oozwave.jpg'
+import shirtCustomizer from '../../public/3dShirtCustomizer.png'
 import sms from '../../public/smsltd.jpg'
 import techStack from '../../util/tech'
 
@@ -147,19 +148,29 @@ export default function Home() {
             <div className='basis-1/3 flex-1'>
               <Image src={ ooz } alt='mobile_app_project' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
             </div>
+
             <div className='basis-1/3 flex-1'>
-              <Image src={ hotelpage1 } alt='css_project_eduonix' className='rounded-lg object-cover' style={{ width: '100%', height: '100%' }}/>
+              <Image src={ hotelpage1 } alt='css_project_eduonix' className='rounded-lg object-cover' style={{ width: undefined, height: '100%' }}/>
             </div>
+
             <div className='basis-1/3 flex-1 relative overflow-hidden group rounded-lg'>
               <Link href={ links.airbnbClone } className='flex items-center justify-center' target='_blank'>
-                <Image src={ airbnbClone } alt='css_project_eduonix' className='rounded-lg object-cover ease-in-out duration-500 group-hover:scale-110' style={{ width: '100%', height: '100%' }}/>
+                <Image src={ airbnbClone } alt='airbnb_clone' className='rounded-lg object-cover ease-in-out duration-500 group-hover:scale-110' style={{ width: '100%', height: '100%' }}/>
                 <div className="absolute bg-transparent w-full h-full opacity-0 rounded-lg overflow-hidden transition-opacity ease-in-out duration-500 group-hover:opacity-50 top-0  group-hover:bg-black" />
                 <h3 className='text-white z-10 absolute group-hover:opacity-100 opacity-0 transition-opacity ease-in-out duration-500 text-5xl'>Airbnb Clone!</h3>
               </Link>
             </div>
+
+            <div className='basis-1/3 flex-1 relative overflow-hidden group rounded-lg'>
+              <Link href={ links.shirtCustomizer } className='flex items-center justify-center' target='_blank'>
+                <Image src={ shirtCustomizer } alt='3d shirt customizer' className='rounded-lg object-cover ease-in-out duration-500 group-hover:scale-110' style={{ width: '100%', height: '100%' }}/>
+                <div className="absolute bg-transparent w-full h-full opacity-0 rounded-lg overflow-hidden transition-opacity ease-in-out duration-500 group-hover:opacity-50 top-0  group-hover:bg-black" />
+                <h3 className='text-white z-10 absolute group-hover:opacity-100 opacity-0 transition-opacity ease-in-out duration-500 text-5xl'>3D Shirt Customiser!</h3>
+              </Link>
+            </div>
           </div>
           <div>
-            <p className='text-md leading-8 text-gray-800 dark:text-white'>Upcoming Projects</p>
+            <p className='text-3xl leading-8 text-gray-800 dark:text-white'>Upcoming Projects</p>
             <p className='text-md pb-5 leading-8 text-teal-600 dark:text-white'>Dental Booking Web App</p>
             <Image src={ dental } alt='upcoming_web_app' className='rounded-lg object-cover pb-10 w-1/2 h-1/2'/>
           </div>
